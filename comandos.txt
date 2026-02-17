@@ -1,0 +1,243 @@
+logout - cerrar sesión
+exit - salir de la terminal
+clear - limpiar la pantalla
+reset - reiniciar la terminal
+man - mostrar el manual de un comando
+info - mostrar información detallada de un comando
+help - mostrar ayuda de comandos internos
+whatis - descripción breve de un comando
+apropos - buscar comandos relacionados por palabra clave
+cal - mostrar calendario
+date - mostrar o cambiar fecha y hora
+uptime - mostrar tiempo encendido del sistema
+hwclock - mostrar o configurar reloj del hardware
+sudo - ejecutar comando como superusuario
+uname - mostrar información del sistema
+lshw - listar información del hardware
+locale - mostrar configuración regional
+hostname - mostrar o cambiar nombre del equipo
+dnsdomainname - mostrar dominio DNS del equipo
+printenv - mostrar variables de entorno
+env - mostrar o modificar variables de entorno
+history - mostrar historial de comandos
+who - mostrar usuarios conectados
+w - mostrar usuarios conectados y actividad
+users - mostrar nombres de usuarios conectados
+last - mostrar historial de inicios de sesión
+reboot - reiniciar el sistema
+poweroff - apagar el sistema
+yes - repetir un texto continuamente
+echo - mostrar texto en pantalla
+shutdown - apagar o reiniciar el sistema programado
+- exit = salir de la ventana 
+- title Titulo de la ventana = cambia el titulo 
+- date = fecha ej: date /t = solo sale la fecha 
+- time = hora ej: time /t = solo ver hora 
+- color = cambiar color ej: color (codigo de color) 
+- help = ayuda help (comando) = ayuda con ese comando 
+- cls = borra pantalla 
+- pause =pausa pause & color 0A 
+- start (comando) = inicia un comando 
+- start cmd /c pause 
+- start cmd /k pause 
+- start (navegador) (enlace) 
+- start /min (navegador) 
+- ver = versión 
+- echo = mensaje por pantalla 
+- comando > fichero 
+- comando >> fichero 
+- comando 2> error.log 
+- Prompt: cambia el nombre al símbolo del sistema 
+- comando >>error en el fichero 
+- md (crear carpetas)ejemplo 
+- Dir (ver el contenido de un directorio) 
+/P (pausa) /b (simple) /s (recursivo) /w (ancho) 
+/A:atributo 
+/A:-atibuto 
+atributos: A (archivo), R (solo lectura), H (oculto), D(directorio), S (sistema) 
+/O: orden 
+/O:-orden (inverso) 
+Orden:N(nombre), D (fecha), G (agrupar), E (extensión), S(tamaño) /T:fecha 
+fechas: C (creación), A (último acceso), W (modificación) 
+/S: recursivo 
+/d: procesar directorios 
+attrib +r ver.txt -> añadir el atributo R 
+attrib +h -s ver.txt -> añadir el atributo H y quitar el atributo S 
+comp-> compara 2 archivos de forma binaria 
+fc -> comparar 2 archivos de texto 
+xcopy -> versión extendida para copiar archivos 
+xcopy origen destino opciones 
+/a -> copiar archivos (atributo a) 
+/h -> copiar archivos y ocultos (atributo h) 
+/s -> recursivo (copia un árbol) 
+/e -> incluir directorios vacios
+/t -> copiar solo la estructura de directorios 
+/c -> continua copiando aunque haya errores 
+/f -> muestra los ficheros que esta copiando 
+/l -> lista los archivos que va a copiar 
+/q -> modo silencioso (no muestra los archivos que copia) /v -> verificar la copia 
+/w -> pausa antes de empezar 
+/p -> pregunta antes de copiar un fichero 
+/y -> no pregunta alsobreescribir 
+-y -> pregunta antes de sobreescribir 
+Ficheros Batch 
+-ficheros de texto 
+-extesión .bat 
+COMANDOS 
+-echo 
+-rem 
+-set 
+variable 
+1. set número=14 
+2. set suma=3+5 
+Vol - ver la etiqueta de una unidad de disco 
+label - cambiar la etiqueta 
+subst - ver/crear/borrar una unidad virtual 
+hostname - ver nombre de equipo 
+systeminfo - info del pc entero 
+compact - ver/activar/desactivar la compresión de archivos (ntfs) cipher - ver/activar/desactivar el cifrado de archivos (ntfs) verify - ver/activar/desactivar la verificación de la escritura verify on 
+verify off 
+chkdsk - comprobar/reparar errores de disco 
+/f para corregir errores 
+/r recuperar info 
+/x para chequear el disco al iniciar el sistema 
+chkntfs - comprobar/repar errores de una unidad ntfs 
+defrag - analizar/desfragmentar una unidad de disco -a para analizar 
+-f para forzar desmotar (dejar de utilizar) 
+-v para salida detallada (verbose) 
+tasklist - lista de procesos del sistema 
+-tasklist | ->filtro de la lista
+-sort: orden alfabéticamente 
+#sort /r: alfabeto al reves
+-t desde el delimitador
+-k coge cadena
+-n ordenar por numero
+-u comprime si son iguales las cadenas
+uniq -> une cadenas iguales (solo con sort)
+-c contador de repetidos
+-u los que no se repiten
+-d solo repetidos
+-i diferencia mayus y minus 
+tr -> sustituye caracteres "a" "c", [a-z][A-Z],[letras] "(-;:)"
+-d borrar caracteres
+-s junta el caracter
+nm
+-find: busca algo en concreto 
+#find /v:busca lo contrario 
+-more: poco a poco enseña la lista 
+taskkill - elimina procesos del sistema 
+-taskkill /pid - el proceso que indicaste será borrado 
+-taskkill /im - borra el mismo proceso aun que tengan diferentes PIDs -taskkill /pid (PID) /t - cerrar ese proceso y lo que haya sido abierto por ese proceso -taskkill /pid (PID) /f - cierra si o si el proceso (forzar) 
+shutdown - apagar pc 
+-i - ventana para agregar otros equipos 
+-s - apagado programado 1 min 
+-l - cerrar sesión 
+-r - reiniciar 
+-t - tiempo 
+-c - comentario 
+-a - cancelar apagado 
+-f - forzar apagado 
+format (disco) /fs:(sistema de archivos) - formatear 
+/q- formato rápido 
+/x- forzar formateo 
+/c- compactar info. (solo en NTFS) 
+/v- etiqueta 
+convert /fs:ntfs - cambiar de FAT32 a NTFS 
+for 
+-for %a in (0,5,20) do echo %a 
+-for /l %a in (0,5,20) do echo %a 
+/r: ruta 
+-for /r c:\Users %a in (*.log) do echo “%a” 
+timeout: poner cuenta atrás 
+timeout /t (tiempo) /nobreak -> para que no se quite 
+pagina asciiart.eu
+cut -d -> cortar por caracter
+-f coger cadena 
+-c coger de punto a punto
+grep -> buscar 
+-i ignorecase
+-c coincidencias encontradas
+-n num de linea
+-E [0-9]{num caracteres} o "^primera letra"
+-[]? 0 o 1
+-[]* 0 o muchas
+-[]+ 1 o muchas
+- \. ese caracter despues de la barra
+-. cualquiera
+- | separar cadenas "cad1|cad2"
+-v exclusion
+-[[:alnum:]] algun num
+lsblk (dispositivos)
+-f
+df (unidades nontadas)
+-t Tipo
+-h unidad
+free (memoria)
+-h unidad
+fsck: comprobar/reparar unidades
+sudo fsck -f /dev/sda2
+eject 
+eject -t
+fsdisk
+expr: operaciones
++
+-
+\*
+/
+%
+length
+inex busca caracter
+substr
+``
+comando ; comando -> comando o comando
+comando || comando ->si el primero falla se utiliza el segundo
+comando && comando ->si el primero se ejecuta el segundo también
+echo $? -> 1 si funciono, 0 no funciono
+-test: evaluar condiciones
+*num
+test 4-gt 3
+-ne distinto
+-eq igual
+-le menor igual
+-lt menor
+-ge mayor igual
+*txt
+=
+!=
+-n contenido
+-z vacio
+*ficheros
+-r leer
+-w escribir
+-x ejecutar
+-e existe
+-s tamaño
+-f fichero
+-d directorio
+$HOME
+$RANDOM : num aleatorio
+tar - empaquetar y desempaquetar archivos
+gzip - comprimir archivos
+bzip2 - comprimir archivos con mayor nivel de compresión
+more - mostrar contenido de un archivo página por página
+less - mostrar contenido de un archivo de forma interactiva
+head - mostrar las primeras líneas de un archivo
+tail - mostrar las últimas líneas de un archivo
+nl - numerar líneas de un archivo
+wc - contar líneas, palabras y caracteres
+rev - invertir el orden de los caracteres por línea
+sort - ordenar líneas de texto
+cut - extraer columnas o campos de texto
+grep - buscar texto por patrón
+tr - transformar o reemplazar caracteres
+uniq - eliminar o mostrar líneas repetidas
+mount - montar un sistema de archivos
+umount - desmontar un sistema de archivos
+parted - crear o modificar particiones de disco
+fdisk - gestionar particiones de disco
+mkfs - crear un sistema de archivos
+lsblk - listar dispositivos de bloques
+df - mostrar espacio usado y disponible en disco
+free - mostrar uso de memoria
+fsck - comprobar y reparar sistema de archivos
+eject - expulsar un dispositivo extraíble

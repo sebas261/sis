@@ -1,0 +1,79 @@
+#!/bin/bash
+
+############################
+# PRACTICA APT / DPKG
+############################
+
+# 1. Consultar sources.list
+echo "1. Mostrar sources.list"
+cat /etc/apt/sources.list
+
+# 2. Actualizar lista de paquetes
+echo "2. Actualizando lista de paquetes"
+sudo apt-get update
+
+# 3. Actualizar paquetes instalados
+echo "3. Actualizando paquetes instalados"
+sudo apt-get upgrade -y
+
+# 4. Instalar paquete local .deb
+echo "4. Instalando paquete local"
+sudo dpkg -i ~/servidor-web-2.0.19.deb
+
+# 5. Buscar programa de dibujo vectorial
+echo "5. Buscando programas de dibujo vectorial"
+apt-cache search vector | grep -i draw
+
+# 6. Instalar uno (ejemplo: inkscape)
+echo "6. Instalando inkscape (ejemplo)"
+sudo apt-get install -y inkscape
+
+# 7. Crear directorio
+echo "7. Creando directorio /home/admin/paquetes"
+sudo mkdir -p /home/admin/paquetes
+
+# 8. Descargar paquete 3dchess
+echo "8. Descargando 3dchess"
+apt-get download 3dchess
+
+# 9. Copiar y renombrar paquete
+echo "9. Copiando paquete"
+cp 3dchess_0.8.1-13_i386.deb /home/admin/paquetes/3dchess.deb
+
+# 10. Mostrar contenido del paquete
+echo "10. Mostrando contenido del paquete"
+dpkg-deb -c /home/admin/paquetes/3dchess.deb
+
+# 11. Desempaquetar
+echo "11. Desempaquetando paquete"
+dpkg-deb -x /home/admin/paquetes/3dchess.deb /home/admin/paquetes/3dchess_extraido
+
+# 12. Instalar paquete
+echo "12. Instalando paquete"
+sudo dpkg -i /home/admin/paquetes/3dchess.deb
+
+# 13. Actualizar paquetes
+echo "13. Actualizando paquetes"
+sudo apt-get upgrade -y
+
+# 14. Buscar paquetes FTP
+echo "14. Buscando paquetes FTP"
+apt-cache search ftp
+
+# 15. Listar paquetes instalados
+echo "15. Listando paquetes instalados"
+dpkg -l
+
+# 16. Descargar apache2
+echo "16. Descargando apache2"
+apt-get download apache2
+
+# 17. Simular instalación de vsftpd
+echo "17. Simulando instalación de vsftpd"
+sudo apt-get install -s vsftpd
+
+# 18. Desinstalar 3dchess
+echo "18. Desinstalando 3dchess"
+sudo dpkg -r 3dchess
+
+echo "FIN DE LA PRACTICA"

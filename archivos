@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -n "dime una carpeta" 
+read carpeta
+for fichero in `ls $carpeta` 
+do
+	if [ -f $carpeta/$fichero/*.log ]
+	then
+		echo "====== $fichero ======"
+		cat "$carpeta/$fichero"
+		sleep 1
+	fi
+done

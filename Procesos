@@ -1,0 +1,64 @@
+#!/bin/bash
+
+############################
+# PRACTICA PROCESOS
+############################
+
+# 1. Procesos actuales
+ps
+
+# 2. Procesos llamados bash
+ps | grep bash
+
+# 3. Todos los procesos
+ps -e
+
+# 4. Todos los procesos con más info
+ps aux
+
+# 5. Procesos de tu usuario
+ps -u $USER
+
+# 6. Procesos en terminal 7 (tty7)
+ps -t tty7
+
+# 7. Ejecutar calculadora y ver PID
+gnome-calculator &
+ps | grep gnome-calculator
+
+# 8. Matar calculadora (sustituye PID)
+kill PID
+
+# 9. Árbol de procesos
+pstree
+
+# 10. Árbol con PID
+pstree -p
+
+# 11. Señales disponibles
+kill -l
+
+# 12. Ejecutar navegador y matar por nombre
+firefox &
+pkill firefox
+
+# 13. Monitorización dinámica
+top
+
+# 14. Matar proceso desde top
+# (Dentro de top pulsa "k" y escribe el PID)
+
+# 15. Esperar 4 segundos y limpiar pantalla
+sleep 4 && clear
+
+# 16. Bloc de notas en segundo plano
+gedit &
+
+# 17. Mostrar trabajos en segundo plano
+jobs
+
+# 18. Pasar a primer plano (ejemplo job 1)
+fg %1
+
+# 19. Prioridad por defecto
+nice

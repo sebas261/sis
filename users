@@ -1,0 +1,51 @@
+id -g -G -n (names) -u
+whoami
+finger
+groups
+passwd
+su
+sudo su root
+adduser --ingroup --home --no-create-home
+deluser --force --remove-home --group --remove-all-files
+addgroup
+delgroup --only-if-empty
+usermod -l -d -g -G- (-a)
+groupmod -n
+chown -R
+chgrp -R
+chmod ugoa+/-/=rwx octal -R
+
+
+getfacl ver info más detallada
+umask mascara de servicios
+
+crontab -> ejecutar tareas periodicas
+-l listar
+-r borrar fichero
+at	hora	fecha	[ENTER]
+hora -> noon 12h, teatime 16h, midnight 0h
+fecha ->dd.mm.aaaa, dd/mm/aaaa
+modificadores -> +n min
+> tarea1
+> tarea2
+> ctrl+d salir
+
+at -l o atq listar tareas
+at -c nª contenidpo de la num
+at -d nº borrar el at numero
+
+apt-get
+-update
+-upgrade
+-dist-upgrade
+-remove desinstalar
+-purge desinstalar elimina todo
+-download
+-install (-d -f -s --reinstall)
+
+sudo dpkg -i paquete --unpack --configure -r -P -v
+dpkg-deb -b -c -x
+dpkg-query -l -s
+dpkg-reconfigure
+
+/var/cache/apt/archives
